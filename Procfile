@@ -1,0 +1,1 @@
+web: gunicorn imageAPI.wsgi --log-file -
