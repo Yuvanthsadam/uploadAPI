@@ -98,15 +98,15 @@ DATABASES = {
 
 WHITENOISE_USE_FINDERS = True
 
-# PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-# STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -150,21 +150,21 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# STATIC_ROOT = BASE_DIR / "staticfiles"
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, "static"),
+# )
 
-STATIC_ROOT = os.path.join(BASE_DIR, "live-static-files", "static-root")
+# STATIC_ROOT = os.path.join(BASE_DIR, "live-static-files", "static-root")
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-#STATIC_ROOT = "/home/cfedeploy/webapps/cfehome_static_root/"
+# #STATIC_ROOT = "/home/cfedeploy/webapps/cfehome_static_root/"
 
-MEDIA_URL = "/media/"
+# MEDIA_URL = "/media/"
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "live-static-files", "media-root")
+# MEDIA_ROOT = os.path.join(BASE_DIR, "live-static-files", "media-root")
