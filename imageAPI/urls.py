@@ -3,7 +3,7 @@ from django.urls import path
 from django.conf.urls import url,include
 from django.conf import settings
 from django.conf.urls.static import static
-from uploadAPI.views import proListView
+
 
 
 urlpatterns = [
